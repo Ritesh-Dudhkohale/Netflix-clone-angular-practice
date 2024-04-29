@@ -1,0 +1,91 @@
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 14px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .font-semibold {
+    font-weight: bold;
+    font-size: 1.5rem; 
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem; 
+  }
+  
+  .swiper-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .swiper-slide {
+    position: relative;
+    transition: all 300ms ease-in-out;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .swiper-slide img {
+    border-radius: 5px;
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .desc {
+    transition: all 300ms ease-in-out;
+    background-color: rgba(24, 24, 24, 0.76);
+    height: 170px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .desc:hover {
+    transition: all 300ms ease-in-out;
+  }
+  
+  .desc.tv {
+    height: 60px;
+  }
+  
+  .desc p {
+    font-size: 0.875rem; /* Equivalent to text-xs */
+    margin-bottom: 0.75rem; /* Adjust as needed */
+  }
+  
+  .text-green-500 {
+    color: #34d399; /* Equivalent to text-green-500 */
+  }
+  
+  .py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  @media screen and (max-width: 599px) {
+    .swiper-slide img {
+      max-width: 14rem;
+    }
+  
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .swiper-slide img {
+      max-width: 10.5rem;
+      border-radius: 2px;
+    }
+  }
+  

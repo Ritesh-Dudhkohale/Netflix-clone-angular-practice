@@ -1,0 +1,27 @@
+<app-header></app-header>
+<app-banner></app-banner>
+<app-movie-carousals
+  [videoContents]="allMovies"
+  [title]="'All Movies'"
+></app-movie-carousals>
+
+<app-movie-carousals
+  [videoContents]="popularMovies"
+  [title]="'Popular Movies'"
+></app-movie-carousals>
+
+<app-movie-carousals
+  [videoContents]="upComingMovies"
+  [title]="'Upcoming Movies'"
+></app-movie-carousals>
+
+<app-movie-carousals
+  [videoContents]="tvShows"
+  [title]="'TV Shows'"
+></app-movie-carousals>
+
+
+<app-movie-carousals
+  [videoContents]="topRated"
+  [title]="'Top Rated'"
+></app-movie-carousals>

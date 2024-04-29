@@ -1,0 +1,49 @@
+.header-container {
+    z-index: 10;
+    height: 70px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark-nav {
+    background-color: #141414;
+}
+
+.header-container img {
+    width: 150px;
+}
+
+div {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+    color: white;
+    cursor: pointer;
+}
+
+li {
+    padding: 10px;
+}
+
+.user-profile {
+    color: white;
+    margin-right: 50px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+li:hover, .user-profile:hover {
+    color: rgb(185, 179, 179);
+}
+
+
+.user-profile img {
+    width: 50px;
+}
