@@ -9,24 +9,14 @@
           class="swiper-slide relative"
         >
           <img [src]="movie.poster_path | image" alt="" />
-          <div
-            @fade
-            *ngIf="movie.title === this.selectedContent"
-            class="desc p-2"
-          >
-            <span class="text-base flex flex-wrap font-bold">{{
-              movie.original_title
-            }}</span>
+          <div @fade *ngIf="(movie.title === this.selectedContent) || (movie.name === this.selectedContent)" class="desc">
+            <span class="moviename">{{ movie.original_title }}</span>
             <p class="text-xs my-3">{{ movie.overview | description : 150 }}</p>
             <div class="py-3 absolute w-[90%] bottom-1">
               <p class="text-xs flex justify-between items-center">
-                <span class="text-green-500"
-                  >Vote Average : {{ movie.vote_average }}</span
-                >
-                <i
-                  class="fa fa-2x fa-chevron-circle-down"
-                  aria-hidden="true"
-                ></i>
+                <span class="text-green">
+                  Vote Average : {{ movie.vote_average }}
+                </span>
               </p>
             </div>
           </div>
