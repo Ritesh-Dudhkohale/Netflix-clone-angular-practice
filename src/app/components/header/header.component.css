@@ -20,9 +20,15 @@ div {
 }
 
 ul {
+    display: flex;
     list-style: none;
     color: white;
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 li {

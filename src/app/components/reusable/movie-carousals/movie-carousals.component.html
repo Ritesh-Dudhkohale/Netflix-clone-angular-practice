@@ -1,5 +1,5 @@
 <div class="container">
-  <p class="font-semibold">{{ title }}</p>
+  <p class="font-semibold" [id]="sectionId">{{ title }}</p>
   <div #swiperContainer class="swiper-container">
     <div class="swiper-wrapper">
       <ng-container *ngFor="let movie of videoContents">

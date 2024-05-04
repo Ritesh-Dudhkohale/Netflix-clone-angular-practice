@@ -1,5 +1,12 @@
 import { NgFor, NgForOf, NgIf } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import Swiper from 'swiper';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { DescriptionPipe } from '../../../pipes/description/description.pipe';
@@ -16,23 +23,23 @@ import { videoModel } from '../models/video-content.interface';
     trigger('fade', [
       transition('void => *', [
         style({ opacity: 0 }),
-        animate(300, style({ opacity: 1 }))
-      ])
-    ])
-  ]
+        animate(300, style({ opacity: 1 })),
+      ]),
+    ]),
+  ],
 })
 export class MovieCarousalsComponent implements OnInit, AfterViewInit {
+  @Input() sectionId!: string;
   @Input() videoContents: videoModel[] = [];
   @Input() title!: string;
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;
   selectedContent: string | null = null;
-  constructor() { }
+  constructor() {}
   ngAfterViewInit(): void {
-   this.initSwiper();
+    this.initSwiper();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   private initSwiper() {
     return new Swiper(this.swiperContainer.nativeElement, {
@@ -70,9 +77,9 @@ export class MovieCarousalsComponent implements OnInit, AfterViewInit {
           slidesPerGroup: 6,
           spaceBetween: 5,
           centeredSlides: false,
-        }
-      }
-    })
+        },
+      },
+    });
   }
 
   setHoverMovie(movie: videoModel) {
