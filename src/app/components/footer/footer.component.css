@@ -1,22 +1,16 @@
 .footer-section {
-    width: 100%;
-    height: 40vh;
+    margin-top: 20px;
+    padding-top: 20px;
     border-top: 1px solid white;
-    display: grid;
-    grid-template-columns: repeat(4, 20%);
-    justify-content: center;
-    align-items: center;
-    column-gap: 5px;
-    margin-top: 50px;
+    color: white;
 }
 
-.footer-section div {
-    margin: 20px;
+.footer-column {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .footer-section p {
-    color: white;
-    text-align: center;
     margin: 10px;
     cursor: pointer;
 }
@@ -26,10 +20,23 @@
 }
 
 .copyright {
-    width: 1000px;
     text-align: center;
+    text-underline-offset: 0.2em;
     font-size: 1.2rem;
-    text-decoration: underline;
     font-weight: 500;
+    text-decoration: underline;
     color: white;
+    padding: 20px;
+}
+
+@media screen and (max-width:400px) {
+
+    .footer-column {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .footer-column div:last-child {
+        display: none;
+    }
 }

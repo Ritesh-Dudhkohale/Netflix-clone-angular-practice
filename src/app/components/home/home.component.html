@@ -1,8 +1,15 @@
 <app-header></app-header>
 <app-banner></app-banner>
+
 <app-movie-carousals
   [videoContents]="allMovies"
   [title]="'All Movies'"
+></app-movie-carousals>
+
+<app-movie-carousals
+  [videoContents]="tvShows"
+  [title]="'TV Shows'"
+  sectionId="tv-shows"
 ></app-movie-carousals>
 
 <app-movie-carousals
@@ -17,16 +24,9 @@
 ></app-movie-carousals>
 
 <app-movie-carousals
-  [videoContents]="tvShows"
-  [title]="'TV Shows'"
-  sectionId="tv-shows"
-></app-movie-carousals>
-
-<app-movie-carousals
   [videoContents]="topRated"
   [title]="'Top Rated'"
   sectionId="topRated"
 ></app-movie-carousals>
-
 
 <app-footer></app-footer>

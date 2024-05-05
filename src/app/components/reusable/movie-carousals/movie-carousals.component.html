@@ -6,19 +6,24 @@
         <div
           (mouseenter)="setHoverMovie(movie)"
           (mouseleave)="clearHoverMovie()"
-          class="swiper-slide relative"
+          class="swiper-slide"
         >
           <img [src]="movie.poster_path | image" alt="" />
-          <div @fade *ngIf="(movie.title === this.selectedContent) || (movie.name === this.selectedContent)" class="desc">
-            <span class="moviename">{{ movie.original_title }}</span>
-            <p class="text-xs my-3">{{ movie.overview | description : 150 }}</p>
-            <div class="py-3 absolute w-[90%] bottom-1">
-              <p class="text-xs flex justify-between items-center">
-                <span class="text-green">
-                  Vote Average : {{ movie.vote_average }}
-                </span>
-              </p>
-            </div>
+          <div
+            class="movie-info"
+            *ngIf="
+              selectedContent === movie.title || selectedContent === movie.name
+            "
+          >
+            <p class="m-name">{{ movie.original_title }}</p>
+            <p class="m-description">
+              {{ movie.overview | description : 150 }}
+            </p>
+            <p class="m-rating">
+              <span class="text-green">
+                Vote Average : {{ movie.vote_average }}
+              </span>
+            </p>
           </div>
         </div>
       </ng-container>

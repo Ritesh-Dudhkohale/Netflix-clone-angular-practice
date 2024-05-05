@@ -1,14 +1,24 @@
+article {
+    width: 100%;
+    height: 89.1%;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .info-screen {
     position: absolute;
-    bottom: 1px;
+    bottom: 60px;
     width: 40%;
     margin-left: 50px;
     padding: 20px;
     color: white;
-    font-size: 1.2rem;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-
 }
 
 .info-screen h1 {
@@ -16,18 +26,75 @@
     background: transparent;
 }
 
-.dire-btn button {
+.btn-class button {
     width: 120px;
     height: 40px;
-    border-radius: 20px;
-    border: none;
     margin: 20px;
     font: 600 1.2rem 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    background-color: transparent;
     cursor: pointer;
 }
 
-.dire-btn button:last-child {
-    background-color: transparent;
-    border: 1px solid gray;
+.btn-class button:hover {
+    border: none;
+    background-color: red;
 }
 
+@media screen and (max-width:400px) {
+    article {
+        height: 50%;
+        position: static;
+        display: flex;
+        flex-direction: column;
+    }
+
+    video {
+        object-fit: fill;
+    }
+
+    .info-screen {
+        width: 100%;
+        position: static;
+        margin: 0 auto;
+    }
+
+    .info-screen h1 {
+        font-size: 40px;
+    }
+
+    .btn-class {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:950px) {
+    article {
+        height: 50%;
+        position: static;
+        display: flex;
+        flex-direction: column;
+    }
+
+    video {
+        object-fit: fill;
+    }
+
+    .info-screen {
+        width: 100%;
+        position: static;
+        margin: 0 auto;
+    }
+
+    .info-screen h1 {
+        font-size: 40px;
+    }
+
+    .btn-class {
+        display: flex;
+        flex-direction: row;
+    }
+}

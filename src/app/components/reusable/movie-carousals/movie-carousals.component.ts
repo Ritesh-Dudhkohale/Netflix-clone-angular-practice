@@ -43,7 +43,7 @@ export class MovieCarousalsComponent implements OnInit, AfterViewInit {
 
   private initSwiper() {
     return new Swiper(this.swiperContainer.nativeElement, {
-      slidesPerView: 3,
+      slidesPerView: 10,
       slidesPerGroup: 2,
       centeredSlides: true,
       loop: true,
@@ -53,6 +53,7 @@ export class MovieCarousalsComponent implements OnInit, AfterViewInit {
           slidesPerGroup: 2,
           spaceBetween: 5,
           centeredSlides: true,
+          
         },
         900: {
           slidesPerView: 3,
@@ -83,7 +84,9 @@ export class MovieCarousalsComponent implements OnInit, AfterViewInit {
   }
 
   setHoverMovie(movie: videoModel) {
-    this.selectedContent = movie.title ?? (movie as any).name;
+    this.selectedContent =
+      (movie.title ?? (movie as any).name) ||
+      (movie.title ?? (movie as any).title);
   }
 
   clearHoverMovie() {
